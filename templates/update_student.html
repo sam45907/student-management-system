@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f4f6f9;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .card{
+            width:450px;
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#28a745;
+            color:white;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+<h2>Update Student</h2>
+
+<form action="/update_student" method="POST">
+
+<input type="hidden" name="id" value="{{ student[0] }}">
+
+<input type="text" name="name" value="{{ student[1] }}" required>
+
+<input type="number" name="age" value="{{ student[2] }}" required>
+
+<input type="text" name="course" value="{{ student[3] }}" required>
+
+<input type="email" name="email" value="{{ student[4] }}" required>
+
+<button type="submit">Update Student</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

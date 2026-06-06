@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Student</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f4f6f9;
+            padding:40px;
+        }
+
+        .container{
+            max-width:800px;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        input{
+            width:70%;
+            padding:10px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:#007bff;
+            color:white;
+            border:none;
+        }
+
+        table{
+            width:100%;
+            margin-top:20px;
+            border-collapse:collapse;
+        }
+
+        th{
+            background:#007bff;
+            color:white;
+            padding:10px;
+        }
+
+        td{
+            padding:10px;
+            border:1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>Search Student</h2>
+
+<form method="POST">
+    <input type="text" name="keyword"
+           placeholder="Enter Student Name">
+
+    <button type="submit">Search</button>
+</form>
+
+{% if students %}
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Age</th>
+<th>Course</th>
+<th>Email</th>
+</tr>
+
+{% for s in students %}
+<tr>
+<td>{{ s[0] }}</td>
+<td>{{ s[1] }}</td>
+<td>{{ s[2] }}</td>
+<td>{{ s[3] }}</td>
+<td>{{ s[4] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

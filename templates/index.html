@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background: linear-gradient(
+                135deg,
+                #667eea,
+                #764ba2
+            );
+        }
+
+        .container{
+            width:450px;
+            padding:40px;
+            border-radius:20px;
+
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+
+            box-shadow:0 8px 32px rgba(0,0,0,0.2);
+
+            text-align:center;
+        }
+
+        h1{
+            color:white;
+            margin-bottom:30px;
+        }
+
+        .menu-btn{
+            display:block;
+            text-decoration:none;
+            background:white;
+            color:#333;
+            padding:14px;
+            margin:12px 0;
+            border-radius:10px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .menu-btn:hover{
+            transform:translateY(-3px);
+            background:#f1f1f1;
+        }
+
+        p{
+            color:white;
+            margin-bottom:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Student Management System</h1>
+
+    <p>Manage student records efficiently</p>
+
+    <a href="/add" class="menu-btn">➕ Add Student</a>
+
+    <a href="/view" class="menu-btn">📋 View Students</a>
+
+    <a href="/search" class="menu-btn">🔍 Search Student</a>
+
+    <a href="/login" class="menu-btn">🔐 Login</a>
+
+</div>
+
+</body>
+</html>
